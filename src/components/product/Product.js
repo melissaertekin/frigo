@@ -26,15 +26,23 @@ const Product = () => {
         </div>
         {/* SOR BUrayi neden olmadi  */}
         <div className={showAll ?'hide' :'container grid3'}>
-          {
-            cathegories.forEach(cath => {
-              product.filter(item => (item.category === cath.id)).map(filteredItem => (
-                <ProductBox key={filteredItem.id} id={filteredItem.id} productImg={filteredItem.productImg} name={filteredItem.name}  />
-              ))
-              
-              })
-          }
-        </div>
+  {cathegories.map(cath => {
+    const filteredProducts = product.filter(item => (item.category === cath.id))
+    return (
+      <div className="container">
+        {cath.name}
+        {filteredProducts.map(filteredItem => (
+          <ProductBox 
+            key={filteredItem.id} 
+            id={filteredItem.id} 
+            productImg={filteredItem.productImg} 
+            name={filteredItem.name}  
+          />
+        ))}
+      </div>
+    )
+  })}
+</div>
        
 
 
