@@ -23,6 +23,7 @@ const RecipeCart = ({ key, id, recipeImg, name, desc }) => {
                 </div>
                 <div className='details'>
                     <p>{name}</p>
+                    <p>{desc}</p>
                     <button onClick={addToFav} >
                         <MdOutlineFavoriteBorder/>
                         Add To Favoites
