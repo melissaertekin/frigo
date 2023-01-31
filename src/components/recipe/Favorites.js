@@ -29,15 +29,18 @@ const Favorites = () => {
                         <AiOutlineClose className="icon" />                    
                     </button>
                 </div>
-                {favoriteRecipes.map((item) => (
-                    <FavoriteItems 
-                        key={item.id}
-                        id={item.id} 
-                        recipeImg={item.recipeImg} 
-                        name={item.name} 
-                     
+                <h1>Your Favorite Recipes</h1>
+                {
+                    favoriteRecipes.map((item) => (
+                        <FavoriteItems 
+                            key={item.id}
+                            id={item.id} 
+                            recipeImg={item.recipeImg} 
+                            name={item.name} 
+                        
                         />
-                ))}
+                    ))
+                }
            </div>
         </>
     );

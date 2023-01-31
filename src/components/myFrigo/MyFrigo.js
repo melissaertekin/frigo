@@ -34,7 +34,6 @@ const MyFrigo = () => {
                         <AiOutlineClose className="icon" />                    
                     </button>
                 </div>
-
                 {myFrigoItems.map((item) => (
                     <MyFrigoItems 
                         key={item.id}

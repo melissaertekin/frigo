@@ -5,6 +5,7 @@ import { recipeActions } from '../../store/recipeSlice';
 
 
 
+
 const RecipeCart = ({ key, id, recipeImg, name, desc }) => {
 
     
@@ -12,7 +13,6 @@ const RecipeCart = ({ key, id, recipeImg, name, desc }) => {
     const addToFav = () => {
         dispatch(recipeActions.addTofavorites({id,name, recipeImg, desc}));
     }
-    
     return(
         <>
             <div className='box boxItem' id='recipe'>
@@ -20,7 +20,7 @@ const RecipeCart = ({ key, id, recipeImg, name, desc }) => {
                     <Link>
                         <img src={recipeImg} alt='recipeImg' />
                     </Link>
-                 </div>
+                </div>
                 <div className='details'>
                     <p>{name}</p>
                     <button onClick={addToFav} >
@@ -28,6 +28,7 @@ const RecipeCart = ({ key, id, recipeImg, name, desc }) => {
                         Add To Favoites
                     </button>
                 </div>
+                
             </div>
         </>
     )
