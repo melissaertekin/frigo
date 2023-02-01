@@ -6,11 +6,7 @@ import { AiOutlineHeart } from "react-icons/ai"
 import { GrHelp } from "react-icons/gr"
 
 
-
-
-
 const User = () => {
-    const user = true;
     const [profileOpen, setProfileOpen] = useState(false);
 
     const close = () => {

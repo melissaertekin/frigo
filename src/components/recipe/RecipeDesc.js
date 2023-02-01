@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
-import {MdOutlineFavoriteBorder} from 'react-icons/md';
-import { useDispatch } from 'react-redux';
-import { myFrigoActions } from '../../store/myFrigoSlice';
+//import { useDispatch } from 'react-redux';
+//import { myFrigoActions } from '../../store/myFrigoSlice';
 
 
 const RecipeDesc = ({recipeImg, name, desc }) => {

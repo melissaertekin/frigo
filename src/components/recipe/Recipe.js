@@ -7,6 +7,9 @@ import { useSelector } from 'react-redux';
 
 const Recipe = () => {
 
+  //const [existeRecipe, setExisteRecipe] = useState(false);
+  
+
   const myFrigoItems = useSelector((state) => state.myfrigo.productList);
   console.log(myFrigoItems)
 
@@ -37,11 +40,15 @@ const Recipe = () => {
   }
 
   const filteredRecipes = recipes.filter(recipe => canCook(recipe));
+  //filteredRecipes.length === 0 ? setExisteRecipe(false) : setExisteRecipe(true);
 
   return (
     <>
       <section className='recipe'>
       <h1>Recipes for your Frigo</h1>
+      <div className={/*existeRecipe ? 'hide' :*/ 'container'}>
+        <p> Looks like we don't have any recipe for your Frigo, please go to marketplace and add products. </p>
+      </div>
         <div className='container grid3'>
           {
             filteredRecipes.map(recipe => (

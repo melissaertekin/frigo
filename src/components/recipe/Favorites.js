@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {BiFridge} from "react-icons/bi";
 import {AiOutlineClose, AiOutlineHeart,  } from "react-icons/ai";
 import FavoriteItems from './FavoritesItems';
 import { useSelector } from 'react-redux';

@@ -2,7 +2,6 @@ import React from 'react';
 import "./header.css";
 import { Link } from "react-router-dom";
 import MyFrigo from '../myFrigo/MyFrigo';
-import {MdLocalGroceryStore} from 'react-icons/md';
 import User from './User';
 import Favorites from '../recipe/Favorites';
 const Header = () => {

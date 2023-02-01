@@ -44,36 +44,7 @@ label {
   color: #999;
   font-size: 13px;
 }
-form,
-.boxItems {
-  border: 1px solid #e6e6e6;
-  border-radius: 12px;
-  padding: 20px;
-  background: #fff;
-}
-form {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin: auto;
-  margin-top: 80px;
-  padding: 40px;
-}
-form span {
-  margin-bottom: 20px;
-}
-.accountInfo .right input,
-form input {
-  border: 1px solid #212121;
-  border-radius: 6px;
-  color: #212121;
-  font-size: 15px;
-  min-height: 44px;
-  padding: 0 20px;
-  transition: border-color 0.2s ease;
-  width: 100%;
-  margin-bottom: 30px;
-}
+
 .button {
   background: #212121;
   border: 1px solid;

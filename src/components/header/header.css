@@ -36,6 +36,7 @@ header {
     z-index: 77;
   }
   .myFrigoItem {
+    overflow: auto;
     position: fixed;
     top: 0;
     right: 0;
@@ -63,7 +64,7 @@ header {
   
  
   
-  /* cartContent */
+  /* myFrigoContent */
   .myFrigoContent {
     margin: 40px 0;
     display: flex;
