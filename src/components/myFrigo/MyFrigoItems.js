@@ -10,6 +10,9 @@ const MyFrigoItems = ({id,productImg,name, quantity}) => {
         dispatch(myFrigoActions.addToMyFrigo({id, name}))
     }
     
+    const decrease = () => {
+        dispatch(myFrigoActions.removeFromMyFrigo({id}))
+    }
 
     return(
         <>
@@ -26,7 +29,7 @@ const MyFrigoItems = ({id,productImg,name, quantity}) => {
                                 <AiOutlinePlus/>
                             </button>
                             <button className='num'>{quantity}</button>
-                            <button className='minus'>
+                            <button className='minus' onClick={decrease}>
                                 <AiOutlineMinus/>
                             </button>
                         </div>

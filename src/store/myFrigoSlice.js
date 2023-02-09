@@ -13,8 +13,7 @@ const myFrigoSlice = createSlice({
             // check if product already existe
             const existItem = state.productList.find((product)=> product.id === newProduct.id);
 
-            if(existItem)
-            {
+            if(existItem){
                 existItem.quantity++;
             }
             else
@@ -28,7 +27,22 @@ const myFrigoSlice = createSlice({
                   state.totalQuantity++;
             }
 
-        }
+        },
+        removeFromMyFrigo(state,action){
+            const chosenProduct = action.payload;
+
+            // check if product already existe
+            const existItem = state.productList.find((product)=> product.id === chosenProduct.id);
+
+            if(existItem.quantity === 1){
+                state.productList = state.productList.filter((item) => item.id !== chosenProduct.id)
+                state.totalQuantity --;
+            }else{
+                existItem.quantity --;
+                existItem.totalPrice -= existItem.price;
+            }
+
+        },
     }
 })
 

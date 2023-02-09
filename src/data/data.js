@@ -123,7 +123,7 @@ export const product = [
         name : "Soy Sauce",
         quantity: 1,
         category: 5004,
-        productImg: "https://images.albertsons-media.com/is/image/ABS/127050813-ECOM?$ng-ecom-pdp-mobile$&defaultImage=Not_Available",
+        productImg: "https://www.kikkoman.eu/fileadmin/_processed_/d/c/csm_201001_SS_150ml_Dispenser_EN_Vegan_WEB_f0b7d7084d.jpg",
     },
     {
         id: 19,
