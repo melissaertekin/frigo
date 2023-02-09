@@ -9,19 +9,17 @@ import { details } from "./pages/recipeBrowse/recipeDetail";
 
 function App() {
   return (
-    <>
-      <Router>
-        <Header />
-        <Switch>
-          <Route exact path='/' component={home} />
-          <Route exact path='/market' component={market} />
-          <Route exact path='/browse' component={browser} />
-          <Route exact path='/details' component={details} />
-        </Switch>
-        <Footer />
-      </Router>
-    </>
    
+		<Router>
+			<Header />
+			<Switch>
+				<Route exact path='/' component={home} />
+				<Route exact path='/market' component={market} />
+				<Route exact path='/browse' component={browser} />
+				<Route exact path='/details' component={details} />
+			</Switch>
+			<Footer />
+		</Router>
   );
 }
 
