@@ -5,19 +5,17 @@ import { RiInstagramFill } from "react-icons/ri"
 
 const Footer = () => {
   return (
-    <>
-      <footer className='boxItems'>
-        <div className='container flex'>
-          <p>Frigo</p>
-          <div className='social'>
-            <BsFacebook className='icon' />
-            <RiInstagramFill className='icon' />
-            <AiFillTwitterCircle className='icon' />
-            <AiFillLinkedin className='icon' />
-          </div>
+    <footer className='boxItems'>
+      <div className='container flex'>
+        <p>Frigo</p>
+        <div className='social'>
+          <BsFacebook className='icon' />
+          <RiInstagramFill className='icon' />
+          <AiFillTwitterCircle className='icon' />
+          <AiFillLinkedin className='icon' />
         </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   )
 }
 
