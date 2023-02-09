@@ -28,24 +28,22 @@ const Product = () => {
         ))}
       </div>
       <div className={showAll ?'hide' :'container grid3'}>
-      {
-        cathegories.map(cath => {
-          const filteredProducts = product.filter(item => (item.category === cath.id))
-          return (
-            <div className="container">
-              <h2>{cath.name}</h2>
-              {filteredProducts.map(filteredItem => (
-                <ProductBox 
-                  key={filteredItem.id} 
-                  id={filteredItem.id} 
-                  productImg={filteredItem.productImg} 
-                  name={filteredItem.name}  
-                />
-              ))}
-            </div>
-          )
-        })
-      }
+      {cathegories.map(cath => {
+        const filteredProducts = product.filter(item => (item.category === cath.id))
+        return (
+          <div className="container">
+            <h2>{cath.name}</h2>
+            {filteredProducts.map(filteredItem => (
+              <ProductBox 
+                key={filteredItem.id} 
+                id={filteredItem.id} 
+                productImg={filteredItem.productImg} 
+                name={filteredItem.name}  
+              />
+            ))}
+          </div>
+        )
+      })}
       </div>
     </section>
   )

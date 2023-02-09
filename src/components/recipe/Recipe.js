@@ -48,6 +48,7 @@ const Recipe = () => {
               key={recipe.id} 
               id={recipe.id} 
               recipeImg={recipe.recipeImg} 
+              ingrediants={recipe.ingrediants}
               name={recipe.name} 
               desc={recipe.desc}  
             />
@@ -60,6 +61,7 @@ const Recipe = () => {
                 key={recipe.id} 
                 id={recipe.id} 
                 recipeImg={recipe.recipeImg} 
+                ingrediants={recipe.ingrediants}
                 name={recipe.name} 
                 desc={recipe.desc}  
               />
