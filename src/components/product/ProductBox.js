@@ -16,7 +16,7 @@ const ProductCart = ({ key, id, productImg, name }) => {
 			</div>
 			<div className='details'>
 				<p>{name}</p>
-				<button onClick={addToMyFrigo}>
+				<button>
 					<AiOutlinePlusCircle/>
 					Add To MyFrigo
 				</button>

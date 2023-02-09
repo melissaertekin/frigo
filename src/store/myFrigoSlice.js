@@ -34,7 +34,6 @@ const myFrigoSlice = createSlice({
         state.totalQuantity --;
       }else{
         existItem.quantity --;
-        existItem.totalPrice -= existItem.price;
       }
     },
   }
