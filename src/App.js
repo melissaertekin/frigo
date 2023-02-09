@@ -17,7 +17,6 @@ function App() {
           <Route exact path='/market' component={market} />
           <Route exact path='/browse' component={browser} />
           <Route exact path='/details' component={details} />
-         
         </Switch>
         <Footer />
       </Router>
