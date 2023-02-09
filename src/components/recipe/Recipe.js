@@ -1,24 +1,22 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import "./recipe.css"
 import { recipes } from "../../data/data"
-import RecipeBox  from "./RecipeBox"
+import RecipeBox from "./RecipeBox"
 import { useSelector } from 'react-redux';
-
 
 const Recipe = () => {
 
-  //const [existeRecipe, setExisteRecipe] = useState(false);
-  
-
+  const [existeRecipe, setExisteRecipe] = useState(false);
   const myFrigoItems = useSelector((state) => state.myfrigo.productList);
-  console.log(myFrigoItems)
-
+ 
+  useEffect(() => {
+    filteredRecipes.length === 0 ? setExisteRecipe(false) : setExisteRecipe(true);
+  }, [myFrigoItems]);
+  
   // check if product exists in frigo
   const existeInFridge = (id) => {
-    for (let index = 0; index < myFrigoItems.length; index++)
-    {
-      if(myFrigoItems[index].id === id)
-      {
+    for (let index = 0; index < myFrigoItems.length; index++){
+      if(myFrigoItems[index].id === id){
         return true;
       }
     }
@@ -27,12 +25,9 @@ const Recipe = () => {
 
   // check if every ingrediant exists in frigo
   const canCook = (recipe) => {
-    console.log(recipe);
     let count = 0;
-    for (let index = 0; index < recipe.ingrediants.length; index++) 
-    {
-      if(existeInFridge(recipe.ingrediants[index]))
-      {
+    for (let index = 0; index < recipe.ingrediants.length; index++) {
+      if(existeInFridge(recipe.ingrediants[index])){
         count++;
       }
     }
@@ -40,32 +35,27 @@ const Recipe = () => {
   }
 
   const filteredRecipes = recipes.filter(recipe => canCook(recipe));
-  //filteredRecipes.length === 0 ? setExisteRecipe(false) : setExisteRecipe(true);
 
   return (
-    <>
-      <section className='recipe'>
+    <section className='recipe'>
       <h1>Recipes for your Frigo</h1>
-      <div className={/*existeRecipe ? 'hide' :*/ 'container'}>
+      <div className={existeRecipe ? 'hide' : 'container'}>
         <p> Looks like we don't have any recipe for your Frigo, please go to marketplace and add products. </p>
       </div>
         <div className='container grid3'>
-          {
-            filteredRecipes.map(recipe => (
-              <RecipeBox 
-                key={recipe.id} 
-                id={recipe.id} 
-                recipeImg={recipe.recipeImg} 
-                name={recipe.name} 
-                desc={recipe.desc}  
-              />
-            ))
-          }
+          {filteredRecipes.map(recipe => (
+            <RecipeBox 
+              key={recipe.id} 
+              id={recipe.id} 
+              recipeImg={recipe.recipeImg} 
+              name={recipe.name} 
+              desc={recipe.desc}  
+            />
+            ))}
         </div>   
         <h1>All of our recipes</h1>
         <div className='container grid3'>
-          {
-            recipes.map(recipe => (
+          {recipes.map(recipe => (
               <RecipeBox 
                 key={recipe.id} 
                 id={recipe.id} 
@@ -73,11 +63,10 @@ const Recipe = () => {
                 name={recipe.name} 
                 desc={recipe.desc}  
               />
-            ))
-          }
+            ))}
         </div>   
-      </section>
-    </>
-  )
+    </section>
+  );
 }
+
 export default Recipe;
