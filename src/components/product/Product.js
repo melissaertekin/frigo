@@ -16,7 +16,7 @@ const Product = () => {
   return (
     <section className='product_flex '>
       <button className='displayOption button' onClick = {handleAll}>Show All</button>
-      <button className='displayOption button ' onClick={handleCath}>Cathegories</button>
+      <button className='displayOption button ' onClick={handleCath}>Categories</button>
       <div className={showAll ? 'product_flex ' : 'hide'}>
         {product.map((item) => (
           <ProductBox 
