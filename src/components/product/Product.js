@@ -14,10 +14,10 @@ const Product = () => {
   };
 
   return (
-    <section className='product'>
+    <section className='product_flex '>
       <button className='displayOption button' onClick = {handleAll}>Show All</button>
       <button className='displayOption button ' onClick={handleCath}>Cathegories</button>
-      <div className={showAll ? 'container grid3 ' : 'hide'}>
+      <div className={showAll ? 'product_flex ' : 'hide'}>
         {product.map((item) => (
           <ProductBox 
             key={item.id} 
@@ -27,11 +27,11 @@ const Product = () => {
           />
         ))}
       </div>
-      <div className={showAll ?'hide' :'container grid3'}>
+      <div className={showAll ?'hide' :'product_flex '}>
       {cathegories.map(cath => {
         const filteredProducts = product.filter(item => (item.category === cath.id))
         return (
-          <div className="container">
+          <div className=" product_flex">
             <h2>{cath.name}</h2>
             {filteredProducts.map(filteredItem => (
               <ProductBox 

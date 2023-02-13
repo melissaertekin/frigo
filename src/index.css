@@ -1,31 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #f9f9f9;
   color: #000;
 }
-h1,
-h2 {
+
+h1, h2 {
   font-weight: 600;
 }
+
 h3 {
   font-weight: 500;
 }
-button,
-input {
+
+button{
   border: none;
   background: none;
   outline: none;
   cursor: pointer;
 }
-::placeholder {
-  font-size: 17px;
-}
+
 .flex {
   display: flex;
   justify-content: space-between;
@@ -36,13 +37,34 @@ input {
   justify-content: center;
   align-items: center;
 }
+
+.product_flex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+.product_flex img {
+  width: 100%;
+  max-width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 p {
   color: #5a5a5a;
   font-size: 15px;
 }
+
 label {
-  color: #999;
-  font-size: 13px;
+color: #999;
+font-size: 13px;
 }
 
 .button {
@@ -57,31 +79,35 @@ label {
   line-height: 1;
   padding: 15px 28px;
 }
+
 .grid {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
 }
+
 .grid3 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 15px;
 }
+
 .container {
   max-width: 95%;
   margin: auto;
 }
+
 footer {
   margin-top: 50px;
   padding: 10px;
 }
+
 footer .icon {
   font-size: 20px;
   margin-left: 10px;
 }
 @media screen and (max-width: 768px) {
-  .grid3,
-  .grid {
+  .grid3, .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }

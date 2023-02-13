@@ -14,10 +14,10 @@ const Header = () => {
 
 	return (
 		<header className='header'>
-			<div className='scontainer flex'>
+			<div className='container flex'>
 				<div className='logo'>
 					<Link to='/'>
-							<h1>Frigo</h1>
+						<h1>Frigo</h1>
 					</Link>
 				</div>
 				<div className='account flexCenter'>
